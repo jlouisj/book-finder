@@ -1,0 +1,12 @@
+<p>tag-selector works!</p>
+<div class="tag-container">
+  <button
+    *ngFor="let trope of tropes"
+    (click)="toggleTrope(trope)"
+    [class.selected]="selectedTropes.includes(trope)"
+  >
+    {{ trope }}
+  </button>
+</div>
+
+<p>Selected tropes: {{ selectedTropes.join(', ') }}</p>
